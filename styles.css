@@ -1,0 +1,67 @@
+    /* grid-template-columns: fr,px,% {repeat(10 kolonka sany)} kolonkalaryn razmeri*/
+    /* grid-template-rows: 100px 200px 300px; setirin razmeri */
+    /* grid-gap:100px; 2 gornusi bar{grid-row-gap}{grip-column-gap} aralygy acyar contentlerin*/
+    /* grid-auto-rows: minmax(100px auto) contentin icinin razmer;contentin ici ulalyar */
+    /* justify-content: center; flexdaky yaly itemlerin yerlesisi */
+    /* justify-items: center; itemlerin yerlesis ici bos itemler */
+    /* justify-self: end;x boyunca yeke bir itemin yerlesisi */
+    /* align-self: end;y boyunca itemin yerlesisi */
+    /* grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;          - bularyn hemmesi haysynda baslamaly we haysynda gutarmalydygyny {column sutun}{row setir}
+    grid-row-end: 4;  */
+    /* grid-template-areas: ; bu yerlesis oblastlary */
+    body{
+        text-transform: uppercase;
+        font-size:28px;
+        font-weight: bold;
+        font-family:Arial, Helvetica, sans-serif;
+        color: yellowgreen;
+    }
+    .container{
+        width: 700px;
+        height: 700px;
+        border: 10px solid black;
+    }
+    .inner{
+        width: 50%;
+        height: 50%;
+        background-color: aquamarine;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation-name: move;
+        animation-duration: 5s;
+        animation-timing-function:ease;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite
+    }
+    
+    .container:hover .inner{
+        animation-play-state: paused;
+    }
+       
+    @keyframes move{
+        0%{
+        transform:translateX(0)  translate(0)
+        }
+        25%{
+         transform:translateX(100%);
+         color: white;
+         background-color: blue;
+        }
+        50%{
+            transform:translateX(100%)  translateY(100%);
+            color: rgb(116, 255, 151);
+            background-color: rgb(8, 56, 52);
+         }
+        75%{
+            transform:translateX(0)  translateY(100%);
+            color: rgb(255, 116, 181);
+            background-color: rgb(226, 180, 53);
+            }
+                
+       100%{
+        transform:translateX(0)  translate(0) 
+    }
+    }
